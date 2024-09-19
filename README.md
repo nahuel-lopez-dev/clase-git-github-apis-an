@@ -1,17 +1,17 @@
 <section id="inicio" align="center">
     <h1>Git, GitHub e Introducción a las APIs</h1>
     <img src="./analitica_noviembre_logo.jpg"/>
-    <h2 align="center">Bootcamp de Analítica Noviembre</h2>
+    <h2 align="center">Bootcamp de <a href="https://analiticanoviembre.com.ar/">Analítica Noviembre</a></h2>
 </section>
 
-<h3>Clase para <a href="https://analiticanoviembre.com.ar/">Analítica Noviembre</a></h3>
-<h3>La mejor comisión de alumnos de analítica noviembre</a></h3>
+
+<h3>Para la mejor comisión de alumnos de Analítica Noviembre</a></h3>
 
 ### Tabla de contenidos:
 
 - [**Información del proyecto**](#información-del-proyecto)
 - [**Git**](#git)
-  - [Introducción](#introducción)
+  - [Introducción a Git](#introducción-a-git)
   - [git status](#git-status)
   - [Comandos de ayuda](#comandos-de-ayuda)
   - [Sobre la configuración](#sobre-la-configuración)
@@ -32,6 +32,7 @@
   - [Viajes en el tiempo:](#viajes-en-el-tiempo)
   - [Crear Alias](#crear-alias)
 - [**GitHub**](#github)
+  - [Introducción a GitHub](#introducción-a-github)
   - [Comandos más utilizados:](#comandos-más-utilizados)
   - [Clonar un repositorio](#clonar-un-repositorio)
   - [Fork en un repositorio](#fork-en-un-repositorio)
@@ -46,7 +47,7 @@
 
 ## **Información del proyecto**
 
-Proyecto para la clase 10 del Bootcamp de Analítica Noviembre.\
+Proyecto para la clase de Git, GitHub e Introducción a las APIs del Bootcamp de Analítica Noviembre.\
 Los contenidos en esta clase son sobre Git, GitHub e Introducción a las APIs.\
 Para trabajar con Git y GitHub, el enfoque está puesto en el uso de la terminal, con explicaciones teóricas añadidas para una mejor claridad del uso de los comandos utilizados.\
 Para la introducción a las APIs, hay un notebook preparado con material teórico práctico. 
@@ -106,7 +107,7 @@ De forma general, los contenidos a tratar serán:
 
 ## **Git**
 
-### Introducción
+### Introducción a Git
 
 Git es un es un sistema de control de versiones. 
 Utiliza comandos en su versión para la terminal.
@@ -121,6 +122,9 @@ Para saber en qué estado estamos trabajando:
 - 3° estado: ya guardados (con git commit, aunque requiere previo registro con el git add)
 
 Luego cuando se modifique un archivo, aparecerá la M para indicar que el archivo ha sido modificado.
+
+Enlace a la página de Git:\
+[Página Oficial de Git](https://git-scm.com/)
 
 ### git status 
 
@@ -458,11 +462,44 @@ Con eso ahora al hacer git s va a hacer lo mismo que si ejecutaramos:
 
     git status -s -b o lo que es lo mismo git status -sb
 
----
 
 ## **GitHub**
 
-Importante: se suele ignorar en .gitignore aquello que no se desea subir a GitHub
+### Introducción a GitHub
+
+¿Qué es GitHub?\
+GitHub es mucho más que una plataforma para alojar nuestros proyectos y realizar un desarrollo colaborativo.\
+GitHub es una plataforma de desarrollo de software que permite almacenar, compartir y trabajar en proyectos de código abierto, pero también permite una forma de hacer networking entre desarrolladores de todo el mundo, generar una carta de presentación al mundo IT, y aprender de proyectos avanzados y bien documentados. 
+Hoy en día en GitHub se encuentran tantos proyectos pequeños como soluciones complejas con grandes documentaciones, y repositorios que alojan miles de recursos para estudiar y aprender de forma autodidacta.
+
+Entre sus principales características, se encuentran: 
+ 
+- Almacenar el código en repositorios 
+ 
+- Compartir el trabajo 
+ 
+- Seguir y administrar los cambios en el código 
+ 
+- Intercambiar archivos de código 
+ 
+- Trabajar en proyectos colaborativos 
+ 
+- Instalar la plataforma en servidores particulares para mayor seguridad y privacidad 
+ 
+- Conectar desarrolladores con usuarios para colaborar en la mejora de las aplicaciones 
+ 
+GitHub también cuenta con un entorno de desarrollo integrado llamado "Codespace", que permite editar, depurar, ejecutar y realizar acciones del sistema de versiones sin necesidad de clonar el repositorio. 
+
+Además de esto, tiene una integración online con el editor de código Visual Studio Code, para poder hacer modificaciones desde el mismo repositorio.
+
+El truco es posicionarse en el nombre del repositorio y tocar la tecla que contiene el punto en el teclado. Con eso se abre el editor.
+
+Enlace a la plataforma de GitHub:\
+[GitHub](https://github.com/)
+
+> Importante:\
+En el archivo .gitignore se suelen ignorar todos aquellas carpetas con archivos que no deseamos subir a GitHub, ya sea porque contiene información sensible como contraseñas, o bien porque son carpetas con dependencias que bien pueden recrearse de forma local.
+Ejemplo de esto es la carpeta node_modules de Node, o el venv del virtual enviroment de Python, los users y passwords de bases de datos, etc.
 
 Primera vez:
 
@@ -475,7 +512,7 @@ Ej : git remote add origin https://github.com/Nahuel-DevOne/initializr.git
 4. git branch -M main para modificar el nombre de la rama master a main, que es una opción que considera GitHub. Este paso no es necesario si ya trabajo con rama main. 
 5. git push -u origin main (o el nombre de tu rama) por única vez, sólo cuando se hace el primer git push al repositorio. Luego, todas siguientes subidas a GitHub son sólo con git push.
 
-El -u permite que se configure por defecto el origin main, de forma que no sea necesario repetir gitp push -u origin main, sino sólo git push
+El -u permite que se configure por defecto el origin main, de forma que no sea necesario repetir git push -u origin main, sino sólo git push
 
 ### Comandos más utilizados:
 
@@ -582,6 +619,8 @@ Códigos de errores más comunes:
 ## **Agradecimientos**
 
 Agradecimientos a Analítica Noviembre por el espacio brindado para dar estos temas.
+
+Agradecimientos a los alumnos por su participación.
 
 ## **Información adicional**
 

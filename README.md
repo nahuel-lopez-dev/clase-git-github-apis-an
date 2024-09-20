@@ -5,7 +5,7 @@
 </section>
 
 
-<h3>Para la mejor comisión de alumnos de Analítica Noviembre</a></h3>
+<h3><a>Para la mejor comisión de alumnos de Analítica Noviembre</a></h3>
 
 ### Tabla de contenidos:
 
@@ -311,7 +311,6 @@ Arreglar mensaje del último commit:
     
     git commit --amend -m "mensaje nuevo"
 
-
 ### Sobre el historial de los commits
 
 Para ver el historial de cambios:
@@ -330,21 +329,43 @@ Mostrar el historial de cambios de todas las ramas de una forma breve, indicando
 
 
 ### Revertir commit:
+
+Se utiliza:
+reset soft o reset hard | HEAD^ o hash del commit
     
-El símbolo ^ apunta al último commit, si quisiéramos irnos al anteúltimo commit sería: git reset --soft HEAD^2 que indica del head dos commits atrás, y así sucesivamente se le pueden ir agregar números para llevar esa referencia.
+El símbolo ^ apunta al último commit, si quisiéramos apuntar al anteúltimo commit para eliminarlo sería:\
+git reset --soft HEAD^2 que indica del head dos commits atrás, y así sucesivamente se le pueden ir agregar números para llevar esa referencia.\
 En casos donde esto no sea práctico, puede reemplazarse el HEAD por el hash del commit al que hace referencia para indicarlo explícitamente.
+
+Usando reset --soft, se elimina el commit pero queda la modificación efectuada por este. Hay que deshacerla.
+
+Eliminar el último commit con reset --soft
 
     git reset --soft HEAD^
 
-Deshacer los commits hasta uno en particular:
+Deshacer los commits hasta uno en particular. Si se quiere eliminar uno en particular, hay que apuntar al anterior.
+
+    git reset --soft <hash del commit>
+
+Usando reset --hard, se elimina directamente hasta el commit que se indica.
+
+Eliminar el último commit con reset --hard
+
+    git reset --hard HEAD^
+
+Deshacer los commits hasta uno en particular. Si se quiere eliminar uno en particular, hay que apuntar al anterior.
 
     git reset --hard <hash del commit>
 
-Volver los commits eliminados con reset --hard:
+Volver los commits eliminados, incluso con reset --hard
 
     git reflog
 
+Aclaración:\
+Nada se elimina realmente de Git, van quedando los registros de las modificaciones que se commitean. La única forma de borrarlo todo, es eliminando el archivo .git que da seguimiento al repositorio.
+
 ---
+
 ### Flujo normal de trabajo para arrancar con Git:
 
 Ya estando en posicionado en el proyecto, o el archivo, desde la consola o alguna terminal:
